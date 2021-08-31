@@ -815,11 +815,11 @@ section .container {
 }
 
 .modal {
+  position: absolute;
   width: 528px;
   height: 581px;
-  max-height: 100%;
-  max-width: 100%;
-  margin: auto;
+  top: 50%;
+  left: 50%;
   overflow: auto;
   padding: 40px;
   background-color: var(--primary-wite-color);
@@ -827,6 +827,7 @@ section .container {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transform: translate(-50%, -50%);
 }
 
 .modal-close-button {
@@ -874,6 +875,7 @@ section .container {
 .form-inputs:hover,
 .form-inputs:focus {
   color: var(--accent-color);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .field {
